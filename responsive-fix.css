@@ -1,0 +1,215 @@
+/* Responsive fixes for saga112.github.io/Derl */
+:root {
+  --reading-font-size: 12px;
+}
+
+html {
+  width: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Use the full available screen width instead of a 760px centered column. */
+.shell {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 100dvh;
+}
+
+.tabs {
+  width: 100%;
+  max-width: none;
+}
+
+.view {
+  width: 100%;
+  max-width: none;
+  padding: 16px 12px calc(88px + env(safe-area-inset-bottom));
+}
+
+/* Reading page typography: 12px for the main text. */
+.page {
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  padding: 16px 14px 20px;
+  border-radius: 12px;
+}
+
+.pbody {
+  font-size: var(--reading-font-size) !important;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.pbody p,
+.pbody li,
+.pbody td,
+.pbody th {
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.pbody h2 {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 1.1em 0 .45em;
+}
+
+.pbody h3 {
+  font-size: 13px;
+  line-height: 1.35;
+  margin: 1em 0 .35em;
+}
+
+.pbody .lead {
+  font-size: 12px;
+}
+
+.pbody table {
+  font-size: 12px;
+}
+
+.pbody th,
+.pbody td {
+  padding: 6px 7px;
+}
+
+.code pre {
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 12px;
+}
+
+/* Reduce oversized cover and navigation spacing on phones. */
+@media (max-width: 600px) {
+  .cover-inner {
+    padding: calc(env(safe-area-inset-top) + 32px) 18px calc(env(safe-area-inset-bottom) + 20px) 28px;
+  }
+
+  .cover-title {
+    font-size: clamp(36px, 11vw, 58px);
+  }
+
+  .cover-sub {
+    font-size: clamp(17px, 4.8vw, 22px);
+    margin-top: 16px;
+  }
+
+  .er {
+    margin: 28px 0 24px;
+    font-size: 11px;
+  }
+
+  .er-card {
+    padding: 10px;
+  }
+
+  .er-row {
+    gap: 6px;
+  }
+
+  .er-link {
+    margin-top: 65px;
+  }
+
+  .cover-sql {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .start {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    padding: 15px 18px;
+    gap: 12px;
+  }
+
+  .cover-foot {
+    font-size: 11px;
+  }
+
+  .top {
+    gap: 6px;
+    padding-left: 10px;
+    padding-right: 8px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .bt b {
+    font-size: 13px;
+  }
+
+  .bt small {
+    font-size: 10px;
+  }
+
+  .ibtn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .big {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .row {
+    padding: 16px;
+  }
+
+  .acc-h {
+    padding: 17px 14px;
+  }
+
+  .ut {
+    font-size: 12px;
+  }
+
+  .urow {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 4px 8px;
+    padding: 11px 8px;
+  }
+
+  .pager {
+    gap: 6px;
+  }
+
+  .pbtn {
+    padding: 10px 11px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .pcount {
+    font-size: 11px;
+  }
+
+  .tabs {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .tabs a {
+    padding: 6px 2px;
+    font-size: 10px;
+  }
+
+  .tabs svg {
+    width: 22px;
+    height: 22px;
+  }
+}
